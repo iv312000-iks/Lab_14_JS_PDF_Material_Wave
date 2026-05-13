@@ -1,13 +1,180 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+
+    <title>Resume</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   </head>
+
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+    <header class="top-bar">
+      <button id="downloadBtn" class="action-btn ripple">Скачать PDF</button>
+
+      <button id="resetBtn" class="action-btn dark ripple">Сброс</button>
+    </header>
+
+    <main class="resume" id="resume">
+      <section class="left-column">
+        <article class="card profile-card ripple">
+          <img src="assets/avatar.jpg" alt="avatar" class="avatar" />
+
+          <div class="profile-info">
+            <p class="hello">Hello 👋 I’m</p>
+
+            <h1 class="editable" contenteditable="true">Chris Redfild</h1>
+
+            <h2 class="editable" contenteditable="true">Brand/Logo Designer</h2>
+          </div>
+        </article>
+
+        <article class="card ripple">
+          <h2 class="section-title">Education</h2>
+
+          <div class="education-grid">
+            <div class="education-item active">
+              <span class="year"> 2024 </span>
+
+              <h3 class="editable" contenteditable="true">UX/UI</h3>
+
+              <p class="editable" contenteditable="true">#UX #UI #research</p>
+
+              <span class="school"> Neoland </span>
+            </div>
+
+            <div class="education-item">
+              <span class="year"> 2022 </span>
+
+              <h3 class="editable" contenteditable="true">Product designer</h3>
+
+              <p class="editable" contenteditable="true">
+                #analytics #prototype
+              </p>
+
+              <span class="school"> Coursera </span>
+            </div>
+
+            <div class="education-item">
+              <span class="year"> 2017-2021 </span>
+
+              <h3 class="editable" contenteditable="true">Graphic design</h3>
+
+              <p class="editable" contenteditable="true">#branding #web</p>
+
+              <span class="school"> Cali Institute </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card tools ripple">
+          <h2 class="section-title">Tools</h2>
+
+          <div class="tools-grid">
+            <div>Figma</div>
+            <div>Photoshop</div>
+            <div>Notion</div>
+            <div>WordPress</div>
+            <div>Webflow</div>
+            <div>ChatGPT</div>
+          </div>
+        </article>
+      </section>
+
+      <section class="right-column">
+        <article class="card ripple">
+          <h2 class="section-title">Languages</h2>
+
+          <div class="language">
+            <span>English</span>
+
+            <div class="progress">
+              <div class="progress-bar w100"></div>
+            </div>
+          </div>
+
+          <div class="language">
+            <span>Spanish</span>
+
+            <div class="progress">
+              <div class="progress-bar w80"></div>
+            </div>
+          </div>
+
+          <div class="language">
+            <span>French</span>
+
+            <div class="progress">
+              <div class="progress-bar w60"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card ripple">
+          <h2 class="section-title">Interests</h2>
+
+          <div class="tags">
+            <span>branding</span>
+            <span>logo</span>
+            <span>typography</span>
+            <span>research</span>
+            <span>photography</span>
+            <span>illustration</span>
+          </div>
+        </article>
+
+        <article class="card ripple">
+          <h2 class="section-title">Experience</h2>
+
+          <div class="job active-job">
+            <div class="job-left">
+              <span class="job-date"> Jul. 2023 - Ago. 2023 </span>
+
+              <h3 class="editable" contenteditable="true">
+                Senior Graphic Designer
+              </h3>
+
+              <p>Pinnacle | Full-time</p>
+            </div>
+
+            <div class="job-right">
+              <ul>
+                <li>Research and brainstorm design ideas</li>
+                <li>Review work submitted by designers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="job">
+            <div class="job-left">
+              <span class="job-date"> Ene. 2021 - Jul. 2023 </span>
+
+              <h3 class="editable" contenteditable="true">
+                Graphic / Web Designer
+              </h3>
+
+              <p>Double Square</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="contact ripple">
+          <h2>Let’s chat! I’m ready to work on exciting projects</h2>
+
+          <div class="contact-row">
+            <p class="editable" contenteditable="true">ivann19bj@gmail.com</p>
+
+            <span>|</span>
+
+            <p class="editable" contenteditable="true">+34 666 666 666</p>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
